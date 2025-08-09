@@ -1,0 +1,36 @@
+# Configuração do Netlify para deploy
+
+[build]
+  # Diretório de publicação (onde está o index.html)
+  publish = "."
+
+# Headers de segurança e performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+# Cache para assets
+[[headers]]
+  for = "/docs/imgs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirecionamentos (opcional)
+[[redirects]]
+  from = "/docs"
+  to = "https://docs.game.virtuals.io/"
+  status = 301
+
+[[redirects]]
+  from = "/github"
+  to = "https://github.com/game-by-virtuals/game-python"
+  status = 301
+
+[[redirects]]
+  from = "/discord"
+  to = "https://discord.gg/virtuals"
+  status = 301
