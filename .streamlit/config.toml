@@ -1,0 +1,55 @@
+[theme]
+# Cores principais
+primaryColor = "#6366f1"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f8fafc"
+textColor = "#1e293b"
+
+# Fonte
+font = "sans serif"
+
+# Configurações do servidor
+[server]
+# Porta padrão
+port = 8501
+
+# Endereço
+address = "0.0.0.0"
+
+# Limite de upload (200MB)
+maxUploadSize = 200
+
+# Habilitar CORS
+enableCORS = true
+
+# Habilitar XSS protection
+enableXsrfProtection = true
+
+# Configurações do browser
+[browser]
+# Título da aba
+gatherUsageStats = false
+
+# Configurações de desenvolvimento
+[runner]
+# Magic commands
+magicEnabled = true
+
+# Instalar requirements automaticamente
+installTracer = false
+
+# Watch for file changes
+fastReruns = true
+
+# Configurações de UI
+[ui]
+# Esconder menu do Streamlit em produção
+hideTopBar = false
+
+# Configurações de cliente
+[client]
+# Mostrar erros detalhados
+showErrorDetails = true
+
+# Toolbar
+toolbarMode = "auto"
